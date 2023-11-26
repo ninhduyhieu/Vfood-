@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+
+  </head>
+  <body>
+    <header>
+<div class="logo">
+     <img src="0237ed130449731.Y3JvcCwyNDgwLDE5MzksMCwyNzA.png" width="120px" height="120px">
+      </div>
+      <div class="menu">
+        <li><a href="">Home page</a>
+        </li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Recipes</a>
+            <ul class="sub-menu">
+                <li><a href="Tet.html">Tet</a></li>
+                <li><a href="">Daily</a></li>
+                <li><a href="">Soup</a></li>
+                <li><a href="">Rices</a></li>
+                <li><a href="">Noodle</a></li>
+                <li><a href="">Salads</a></li>
+
+            </ul>
+        
+        
+        </li>
+        <li><a href="booking.html">Cook help</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Trending</a></li>
+        <li><a href="">Community</a>
+            <ul class="sub-menu3">
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+            
+
+            </ul>
+        
+        
+        
+        </li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="">Healcare</a>
+            <ul class="sub-menu2">
+                <li><a href=""></a></li>
+                <li><a href="">Losing weight</a></li>
+                <li><a href="">Antipyretic</a></li>
+                <li><a href="">Enhance physiology</a></li>
+                <li><a href="">Restore health</a></li>
+                
+
+            </ul>
+        
+        
+        </li>
+        
+
+      </div>
+     <div class="Other">
+        <li><input placeholder="Search" type="text" > <i class="fas fa-search"></i>
+        </li>
+        <li><a class="fa fa-user-circle"href="login.html" ></a></li>
+        
+
+     </div> 
+    </header>
+    <section id="slider">
+        <div class="aspect-ratio-169">
+
+            <img src="cao-lau-la-gi-nguon-goc-cao-lau-cao-lau-va-mi-quang-khac-nhau-tipsnote-800x523.jpg" >
+            <img src="banhmi-16945047945811495140150-1694564550418-16945645507101085199001.webp" >
+            <img src="20-1200x676.jpg" >
+            <img src="bi-quyet-nau-canh-kho-qua-don-thit-khong-bao-gio-bi-dang-202107301211370247.jpg" >
+            <img src="cach-nau-pho-bo-nam-dinh-chuan-vi-thom-ngon-nhu-hang-quan-202201250230038502.jpg" >
+
+        </div>
+    <div class="doc-container">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    </section>
+    <section class="app-container"></section>
+  </body>
+  <script>
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document. querySelector('.aspect-ratio-169')
+    const dotItem= document.querySelectorAll(".dot")
+    let imgNumber = imgPosition.length
+    let index = 0
+    imgPosition.forEach(function(image,index){
+        image.style.left = index*100 + "%"
+        dotItem[index].addEventListener("click",function(){
+            slider(index)
+    })
+})
+    function imgslide() {
+        index++;
+        console.log(index)
+        if (index>= imgNumber) {index=0}
+        slider (index)
+
+
+    
+    }
+    function slider (index){
+        imgContainer.style.left= "-"+index*100+ "%"
+        const dotActive = document.querySelector(".active")
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    
+
+
+    
+    setInterval(imgslide,5000)
+
+
+
+
+  </script>
+

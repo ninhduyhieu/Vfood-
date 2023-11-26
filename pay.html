@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Thanh Toán</title>
+</head>
+<body>
+    <h1>Thông Tin Sản Phẩm</h1>
+    <p>Tên Sản Phẩm: Máy Tính X</p>
+    <p>Giá: $999.99</p>
+
+    <h2>Thông Tin Khách Hàng</h2>
+    <form action="process_payment.php" method="post">
+        <label for="name">Họ và Tên:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Địa Chỉ:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <h2>Chọn Phương Thức Thanh Toán</h2>
+        <label for="credit-card">
+            <input type="radio" id="credit-card" name="payment_method" value="credit_card" required>
+            Thẻ Tín Dụng
+        </label><br>
+
+        <label for="paypal">
+            <input type="radio" id="paypal" name="payment_method" value="paypal" required>
+            PayPal
+        </label><br><br>
+
+        <input type="submit" value="Xác Nhận Thanh Toán">
+    </form>
+</body>
+</html>
